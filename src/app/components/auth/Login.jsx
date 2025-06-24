@@ -1,9 +1,10 @@
 'use client';
 
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from 'react';
 
 export default function Login() {
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // const [role, setRole] = useState < UserRole > ('volunteer');

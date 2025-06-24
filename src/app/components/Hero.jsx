@@ -1,3 +1,4 @@
+import ChangePassword from "./auth/ChangePassword"
 import ProfitableFive from "./ProfitableFive"
 
 export default function Hero() {
@@ -19,7 +20,9 @@ export default function Hero() {
                 <p>Earning</p>
                 <p>{earning}</p>
             </div>
+            <ChangePassword />
             <ProfitableFive />
+           
         </>
     )
 }
