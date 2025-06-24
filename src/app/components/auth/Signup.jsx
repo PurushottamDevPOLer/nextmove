@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
-import { auth } from "@/app/firebase/config";
+// import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+// import { auth } from "@/app/firebase/config";
 
 export default function Signup() {
     const [firstName, setFirstName] = useState("");
@@ -30,45 +30,45 @@ export default function Signup() {
             return;
         }
 
-        try {
-            const userCredential = await createUserWithEmailAndPassword(
-                auth,
-                email,
-                password
-            );
-            const user = userCredential.user;
+        // try {
+        //     const userCredential = await createUserWithEmailAndPassword(
+        //         auth,
+        //         email,
+        //         password
+        //     );
+        //     const user = userCredential.user;
 
-            await sendEmailVerification(user);
+        //     await sendEmailVerification(user);
 
-            //Temporarily store user data in local storage
-            localStorage.setItem(
-                "registrationData",
-                JSON.stringify({
-                    firstName,
-                    lastName,
-                    gender,
-                    email,
-                })
-            );
-            setMessage(
-                "Registration successful! Please check your email for verification."
-            );
+        //     //Temporarily store user data in local storage
+        //     localStorage.setItem(
+        //         "registrationData",
+        //         JSON.stringify({
+        //             firstName,
+        //             lastName,
+        //             gender,
+        //             email,
+        //         })
+        //     );
+        //     setMessage(
+        //         "Registration successful! Please check your email for verification."
+        //     );
 
-            //Clear form fields
-            setFirstName("");
-            setLastName("");
-            setGender("");
-            setEmail("");
-            setPassword("");
-            setConfirmPassword("");
-        }
-        catch (error) {
-            if (error instanceof Error) {
-                setError(error.message);
-            } else {
-                setError("An unknown error occurred.");
-            }
-        }
+        //     //Clear form fields
+        //     setFirstName("");
+        //     setLastName("");
+        //     setGender("");
+        //     setEmail("");
+        //     setPassword("");
+        //     setConfirmPassword("");
+        // }
+        // catch (error) {
+        //     if (error instanceof Error) {
+        //         setError(error.message);
+        //     } else {
+        //         setError("An unknown error occurred.");
+        //     }
+        // }
     }
     return (
         <>
