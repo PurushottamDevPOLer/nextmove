@@ -89,44 +89,44 @@ export default function Signup() {
 
                         <form className="space-y-6" onSubmit={handleRegister}>
                             <div className="flex flex-col">
-                                <label htmlFor='email' className="text-sm font-medium text-gray-700 mb-1">
+                                <label htmlFor='fname' className="text-sm font-medium text-gray-700 mb-1">
                                     First Name <span className="text-red-500 ml-1">*</span>
                                 </label>
                                 <input
-                                    id='email'
+                                    id='fname'
                                     type="email"
-                                    value={email}
+                                    value={firstName}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder={role === 'admin' ? 'admin@fleet.com' : 'volunteer@hotel.com'}
+                                    placeholder="Enter your First Name"
                                     required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
                                 />
                             </div>
 
                             <div className="flex flex-col">
-                                <label htmlFor='email' className="text-sm font-medium text-gray-700 mb-1">
+                                <label htmlFor='lname' className="text-sm font-medium text-gray-700 mb-1">
                                     Last Name <span className="text-red-500 ml-1">*</span>
                                 </label>
                                 <input
-                                    id='email'
+                                    id='lname'
                                     type="email"
-                                    value={email}
+                                    value={lastName}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder={role === 'admin' ? 'admin@fleet.com' : 'volunteer@hotel.com'}
+                                    placeholder="Enter your Last Name"
                                     required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label htmlFor='email' className="text-sm font-medium text-gray-700 mb-1">
+                                <label htmlFor='gender' className="text-sm font-medium text-gray-700 mb-1">
                                     Gender <span className="text-red-500 ml-1">*</span>
                                 </label>
                                 <input
-                                    id='email'
+                                    id='gender'
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder={role === 'admin' ? 'admin@fleet.com' : 'volunteer@hotel.com'}
+                                    placeholder="Enter your Gender"
                                     required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
                                 />
@@ -140,7 +140,7 @@ export default function Signup() {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder={role === 'admin' ? 'admin@fleet.com' : 'volunteer@hotel.com'}
+                                    placeholder="Enter your Email"
                                     required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
                                 />
@@ -154,7 +154,7 @@ export default function Signup() {
                                     type={showPassword ? 'text' : 'password'}
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    placeholder="Enter your password"
+                                    placeholder="Enter your Current Password"
                                     required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm pr-12"
                                 />
@@ -175,7 +175,7 @@ export default function Signup() {
                                     type={showPassword ? 'text' : 'password'}
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    placeholder="Enter your password"
+                                    placeholder="Enter your Confirm Password"
                                     required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm pr-12"
                                 />
