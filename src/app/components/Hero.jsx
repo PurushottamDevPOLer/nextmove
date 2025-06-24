@@ -1,4 +1,3 @@
-import PieChart from "./charts/PieChart"
 import ProfitableFive from "./ProfitableFive"
 
 export default function Hero() {
