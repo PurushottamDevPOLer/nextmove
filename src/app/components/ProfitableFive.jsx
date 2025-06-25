@@ -1,6 +1,4 @@
 import PieChart from "./charts/PieChart"
-import Login from "./auth/Login"
-import Signup from "./auth/Signup"
 
 export default function ProfitableFive() {
 
@@ -16,7 +14,6 @@ export default function ProfitableFive() {
             <ul>{list}</ul>
             <p>Amount</p>
             <PieChart />
-            <Signup />
         </>
     )
 }
